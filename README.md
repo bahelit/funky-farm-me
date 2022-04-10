@@ -1,11 +1,6 @@
 ## Overview
 
----
-
-Example [Hugo] website using GitLab Pages.
-
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
+Funky [Hugo] website using Cloudflare Pages and GitHub.
 
 - [Cloudflare & GitHub CI](#Cloudflare-&-GitHub-CI)
 - [Building locally](#building-locally)
@@ -13,7 +8,6 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 
 ## Cloudflare & GitHub CI
 
----
 This project's static Pages are built by [Cloudflare Pages][], following the steps
 defined in [Cloudflare Pages documentation][].
 
@@ -31,7 +25,6 @@ Read more at Hugo's [documentation][].
 
 ### Preview your site
 
----
 If you clone or download this project to your local computer and run `hugo server`,
 your site can be accessed under `localhost:1313/hugo/`.
 
@@ -39,7 +32,6 @@ The theme used is adapted from http://themes.gohugo.io/beautifulhugo/.
 
 ## Did you fork this project?
 
----
 If you forked this project for your own use, please go to your project's
 **Settings** and remove the forking relationship, which won't be necessary
 unless you want to contribute back to the upstream project.
