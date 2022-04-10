@@ -111,17 +111,17 @@ filesystem.
 
 The Funky Farm server runs all the services using containers with [Docker](https://www.docker.com/). This allows for 
 running programs in a way that doesn't depend on what is installed on the host system or what the host operating system 
-even is. Docker makes for a great tool for using home servers, allowing for easy experimentation with complicated 
-software with an easy way to clean-up afterwards. 
+even is. Docker makes for a great tool for home servers, allowing for easy experimentation with complicated 
+software with an easy way to clean-up afterwards.  
 
 ## Software
 
 The software for a typical home server would handle the work of saving a file and serving a file. For example 
-most NAS devices are configured to receive important files from other devices in the house a for backup in case the 
+most NAS devices are configured to receive important files from other devices in the house for backup in case the hard 
 drive on the device goes out. The simple backup software allows for the backup to happen automatically every time a new 
 file is added or changed. If the NAS software supports snapshots the backup would protect against one of the worst type 
 of attacks to be effected by, ransomware. Ransomware encrypts all the data on the machine and holds the keys to unlock 
-the data ransom for until payment has been made. Enabling snapshots essentially could save the data from being lost as 
+the data ransom until payment has been made. Enabling snapshots essentially could save the data from being lost as 
 the last copy before it was encrypted should still exist in the snapshot history.  
 
 Saving and serving files plus the automation based on timers and sensor readings mentioned above are just scratching the 
