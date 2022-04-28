@@ -15,7 +15,7 @@ at best, this is true for businesses and homes of all sizes.
 Most home networks will consist of one connection to the WAN (internet) that all the devices in the local network, aka the [LAN](https://en.wikipedia.org/wiki/Local_area_network) 
 use to access the internet. The [WAN](https://en.wikipedia.org/wiki/Wide_area_network) connection comes from the [modem](https://en.wikipedia.org/wiki/Modem) 
 which handles talking to the internet service provider (Comcast, Spectrum, StarLink). Most internet service providers 
-will "provide" (rent) a modem and that modem my include a [router](https://en.wikipedia.org/wiki/Residential_gateway). 
+will "provide" (rent) a modem and that modem may include a [router](https://en.wikipedia.org/wiki/Residential_gateway). 
 The LAN connections are managed by the router, all the devices talk to the router, wired or Wi-Fi and the requests for 
 the internet get "routed" through the modem to access the internet.
 

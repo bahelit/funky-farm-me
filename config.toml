@@ -1,6 +1,6 @@
 baseURL = 'https://blog.funkyme.farm/'
 languageCode = 'en-us'
-title = 'My Funky Hugo Site'
+title = 'Funky Hugo Site'
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
@@ -25,8 +25,8 @@ show_reading_time = true
   filename = "sitemap.xml"
 
 [params]
-  author = ""
-  favicon = ""
+  author = "Michael Salmons"
+  favicon = "/images/favicons/favicon.ico"
   site_logo = "/images/logo.png"
   description = "Using open source tech & community sourced. Maybe."
   facebook = ""
