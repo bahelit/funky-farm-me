@@ -44,3 +44,9 @@ show_reading_time = true
   background_color_class = "bg-navy"
   featured_image = "/images/sundayRiver1View.jpg"
   recent_posts_number = 2
+
+[[menu.main]]
+name = "Contact"
+weight = 0
+identifier = "Contact"
+url = "https://mikescloud.funkyme.farm/apps/forms/gK3mYMBDxoHKrJs8"
