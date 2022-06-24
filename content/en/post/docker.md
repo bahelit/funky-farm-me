@@ -41,7 +41,7 @@ The other tweak is more specific for users of the ZFS filesystem, Docker has a s
 storage technologies such as volume management, snapshots, check-summing, compression and deduplication, replication and 
 more.  
 
-When ZFS driver is in use the base layer of an image is a ZFS filesystem. Each child layer is a ZFS clone based on a ZFS 
+When the ZFS driver is in use the base layer of an image is a ZFS filesystem. Each child layer is a ZFS clone based on a ZFS 
 snapshot of the layer below it. A container is a ZFS clone based on a ZFS Snapshot of the top layer of the image it’s 
 created from. One benefit of this is very efficient use of the disk space.  
 
