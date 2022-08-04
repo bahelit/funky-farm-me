@@ -11,19 +11,19 @@ title: "Your Own Cloud with Nextcloud"
 Regain control of your data while still being able to securely share and collaborate with others.
 <!--more-->
 
-Nextcloud provides a full suite off applications for file services similar to features provided by Google Drive or 
-Office365 and runs on everything from big servers with multiple cpus and disks to a little raspberry pi.  
+[Nextcloud](https://nextcloud.com) provides so many features but really boils down to being an extendable productivity 
+tool to organize your digital life.  
 
-The main functionality of Nextcloud is on the server but the syncing clients tie it together. On every platform from 
-desktop to mobile there is a sync client that'll talk to the server and automatically send files to the server. This is 
-useful for backing up pictures from a phone or important documents on the computer. This syncing functionality is just 
-scratching the surface of what Nextcloud provides and being modular in design has even more functionality provided 
-through plugins.  
+Nextcloud itself is installed onto a server or in other words any PC left running 24/7, from big servers with 
+multiple processors and disks to a little raspberry pi. It can be accessed through a web browser or with native client 
+applications on just about every platform from desktop to mobile, these are called the sync clients and handle talking 
+to the server and automatically pushing and pulling files to the server. This is useful for backing up pictures from a 
+phone or important documents on the computer.  
 
 ## Why Nextcloud
-Why [Nextcloud](https://nextcloud.com)? Use Nextcloud if you want to take control of your data, "the self-hosted 
-productivity platform that keeps you in control". What does that actually mean though? Well let's break it down, on our
-phones we have a few different types of data such as contacts, images/videos, the news we read, the schedule from our 
+Why would someone want to use Nextcloud? If we go off the description of their website we use Nextcloud to take control 
+of our data, "the self-hosted productivity platform that keeps you in control". What does that actually mean though? 
+Are we not already in control of our data? The data on our phones we have a few different types of data such as contacts, images/videos, the news we read, the schedule from our 
 calendar to name a few. All of which can be done in Nextcloud  
 
 #### Files Docs & Images/Videos 📄 & 📷
@@ -35,9 +35,10 @@ at a fraction of the cost. A plus with Nextcloud is that every shared file or al
 such as having the link expire after a week or a month, or by setting a password for viewing the link.  
 
 #### News 📰
-RSS feeds still exist and are still a great way to follow the news. Nextcloud provides a plugin called [News](https://apps.nextcloud.com/apps/news) 
-that lets users subscribe to and organize RSS/Atom feeds. Most sites provide RSS feeds, they may just be a bit hard to 
-find. The server pulls down the news articles as they come in and are viewable in the web browser or a dedicated 
+RSS feeds still exist and are still a great way to follow the news but there aren't many client or services for managing
+RSS new feeds anymore. Nextcloud provides a plugin called [News](https://apps.nextcloud.com/apps/news) that lets users 
+subscribe to and organize RSS/Atom feeds. Most sites provide RSS feeds, though they may just be a bit hard to find. 
+The server pulls down the news articles as they come in and are viewable in the web browser or a dedicated 
 Nextcloud News Apps on [Android](https://play.google.com/store/apps/details?id=de.luhmer.owncloudnewsreader&hl=en_US&gl=US) 
 and [iPhone](https://apps.apple.com/us/app/nextnews/id1573041539).  
 
@@ -69,19 +70,7 @@ to go by for important data is that, if it doesn't exist in at least 3 different
 should be true of the Nextcloud install, there should be a backup of all the data on separate disks and one backup 
 should be at a different physical location. If running the server locally this can be achieved by backing up to an 
 external disk for the second copy and then sending/syncing that backup to the cloud as it is already deduplicated and 
-encrypted saving disk space and preserving privacy for offsite storage for the 3rd copy.  
-
-The Funky Farm instance of Nextcloud is installed using the All-In-One docker installation. The "server" is a 
-workstation grade motherboard with a consumer grade CPU with a TDP of 65w (somewhat low power) and lots of ECC RAM. The
-docker images are on a dedicated zpool of SSDs and the media is on a separate zpool of HDDs and Optane SSDs. A [zpool](https://openzfs.github.io/openzfs-docs/man/7/zpoolconcepts.7.html#Virtual_Devices_(vdevs)) 
-is a part of the [ZFS](https://en.wikipedia.org/wiki/ZFS) filesystem and is basically a collection of disks 
-represented as one to the operating system. Each zpool can be configured differently, a zpool can be one disk or it can 
-be a collection of many disks arranged into to different types of grouping configurations depending on the use case, 
-similar to [RAID](https://en.wikipedia.org/wiki/RAID) but with more flexibility as the RAID functionality is in the 
-operating system rather than a piece of hardware. Just having multiple disks isn't the same as having a backup though, 
-it is redundancy which will help with data loss if a drive goes bad. A backup will help protect from complete failure 
-from loss of equipment from things such as natural disasters. To go the "extra mile" and be confident in the backups by 
-restoring them on another machine and verify everything looks good.  
+encrypted saving disk space and preserving privacy for offsite storage of the 3rd copy.
 
 #### Docker 🐳
 Installing Nextcloud has been made surprisingly easy, boiling down to running just a single command to get it up and 
@@ -103,13 +92,13 @@ Plug it in and get the drive path
 df -th
 {{< / highlight >}}
 
-After determining the drive path can put that in the fstab or get a better identifier for the fstab, the UUID which is 
-unique for the drive and the drive's /dev path could change.
+After determining the drive path put that in the fstab or get an even more reliable identifier for the fstab, the UUID 
+which is unique for each drive and the drive path starting with /dev path could change between reboots.
 {{< highlight bash-session "linenos=false" >}}
 sudo blkid /dev/<drive path> | awk -F'"' '{print $2}'
 {{< / highlight >}}
 
-Make sure the folder /media/backup exists and is empty then add the following line to the bottum of the fstab with your 
+Make sure the folder /media/backup exists and is empty then add the following line to the bottom of the fstab with your 
 UUID
 {{< highlight bash-session "linenos=false" >}}
 UUID=<your UUID> /media/backup auto nosuid,nodev,nofail 0 0
@@ -122,4 +111,4 @@ touch /media/backup/testFile
 {{< / highlight >}}
 
 After the backup drive has been set up go get the most upto date installation instructions on the 
-[Nextcloud All In One README](https://github.com/nextcloud/all-in-one#how-to-use-this)
+[Nextcloud All In One README](https://github.com/nextcloud/all-in-one#how-to-use-this).
