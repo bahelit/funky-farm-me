@@ -1,6 +1,6 @@
 ---
 date: 2023-07-25T11:14:48-04:00
-description: "Migrating from a server OS acting as a NAS to a server OS designed as NAS appliance"
+description: "Migrating from a server OS acting as a NAS to a NAS OS for the server"
 featured_image: '/images/posts/hddsBlue.jpg'
 tags: ["server", "docker", "linux", "ubuntu", "TrueNAS SCALE", "ZFS", "NAS", "home server", "migration"]
 title: "Home Server Migration"
@@ -91,17 +91,30 @@ to choose from. [TrueCharts](https://truecharts.org/) is a community-driven cata
 TrueNAS SCALE. While I went with TrueNAS SCALE to use Docker without having to run a VM the Level1Techs video below 
 shows how to do it.  
 
+## Nextcloud 📁
+On TrueNAS SCALE, there are multiple ways to run Nextcloud based on your needs. The Nextcloud team recommends running 
+Nextcloud-AIO (suite of docker containers) inside a VM, this provides an easy deployment and maintenance with most 
+features included in this one Nextcloud instance. The other option is to use the Nextcloud Helm chart from TrueCharts, 
+this is the option I went with, it is more lightweight and less resource-intensive than the Nextcloud-AIO VM. The 
+downside is that it does not include features like Calendar, Contacts, Mail, and Talk which are part of the [Groupware](https://nextcloud.com/groupware/) 
+package. It does include the most important one user management and file storage. If you need the Groupware features 
+you can follow this guide by Level1Techs to get it running in a VM and be able to connect to it remotely using Tailscale.  
+
 [LEVEL1TECHS TRUENAS: FULL SETUP GUIDE FOR SETTING UP PORTAINER, CONTAINERS AND TAILSCALE](https://level1techs.com/video/truenas-full-setup-guide-setting-portainer-containers-and-tailscale-ultimatehomeserver)  
 
-One of the reasons I currently prefer to use the Apps is that they are managed by TrueNAS within the web interface and 
-with a couple of clicks can upgrade or even rollback a version. The Apps also have a lot of custom configuration options 
- exposed through the interface that make it easy to configure the application being deployed.
+The reasons I currently prefer to use the [Apps](https://www.truenas.com/docs/scale/scaletutorials/apps/) is that they
+are managed within TrueNAS using the web interface and with a couple of clicks can upgrade or even rollback a version.
+The Apps also have a lot of custom configuration options exposed through the interface that make it easy to configure
+the application being deployed.  
+
+We use this Nextcloud this instance just to save our files and photos from our mobile devices using the auto-upload 
+feature of the [Nextcloud Mobile App](https://nextcloud.com/clients/).  
 {{< figure src="/images/posts/trueNAS_Deploy_Nextcloud.png" title="Deploying" >}}
 
 ## Nextcloud Cron Job ⌛
-For the Nextcloud app to function properly you need to configure a cron job, this is a scheduled task that executes a
-command at a given frequency. To get this cron job to fire inside TrueNAS SCALE we'll add a [Cron Job](https://www.truenas.com/docs/scale/scaleuireference/systemsettings/advancedsettingsscreen/#cron-jobs-widget) 
-to the by going to "System Setting > Advanced", and clicking "Add" and putting the following command in the command field.
+For the Nextcloud to function properly a cron job needs to be added, this is a scheduled task that executes a
+command at a given frequency. To get this cron job to fire in TrueNAS SCALE we'll add a [Cron Job](https://www.truenas.com/docs/scale/scaleuireference/systemsettings/advancedsettingsscreen/#cron-jobs-widget) 
+by going to "System Setting > Advanced", and clicking "Add" and putting the following command in the command field.
 ```bash
 docker ps  | grep "k8s_nextcloud_nextcloud" | awk '{ print $1; }' | xargs -I % docker exec --user www-data "%" php -f /var/www/html/cron.php
 ```
