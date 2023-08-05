@@ -1,10 +1,10 @@
----
-date: 2022-04-11T11:14:48-04:00
-description: "How this site was created & gets updated."
-featured_image: '/images/logo.png'
-tags: ["open source", "GoLang", "Hugo", "github"]
-title: "Funky Blog"
----
++++
+date = 2022-04-11T11:14:48-04:00
+description = "How this site was created & gets updated."
+featured_image = '/images/logo.png'
+tags = ["open source", "GoLang", "Hugo", "github"]
+title = "Funky Blog"
++++
 
 # Funky Blog ☁️
 

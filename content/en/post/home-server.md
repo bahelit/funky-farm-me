@@ -1,10 +1,10 @@
----
-date: 2021-04-24T11:14:48-04:00
-description: "Run self-hosted services"
-featured_image: '/images/posts/hddsBlue.jpg'
-tags: ["server", "docker", "linux", "ubuntu"]
-title: "Home Server"
----
++++
+date = 2021-04-24T11:14:48-04:00
+description = "Run self-hosted services"
+featured_image = '/images/posts/hddsBlue.jpg'
+tags = ["server", "docker", "linux", "ubuntu"]
+title = "Home Server"
++++
 
 # Home Server 🖥️
 

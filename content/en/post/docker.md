@@ -1,10 +1,10 @@
----
-date: 2022-05-27T11:14:48-04:00
-description: "Using docker and containers."
-featured_image: '/images/posts/Docker_logo.png'
-tags: ["open source", "docker", "linux"]
-title: "Using Docker"
----
++++
+date = 2022-05-27T11:14:48-04:00
+description = "Using docker and containers."
+featured_image = '/images/posts/Docker_logo.png'
+tags = ["open source", "docker", "linux"]
+title = "Using Docker"
++++
 
 # Docker 🐳️
 

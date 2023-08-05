@@ -1,10 +1,10 @@
----
-date: 2021-04-23T11:13:32-04:00
-description: "Home network configuration & recommendations"
-featured_image: '/images/posts/home_networking.jpg'
-tags: ["Home Network", "Wi-Fi", "DIY", "Tips", "DNS"]
-title: "Home Network"
----
++++
+date = 2021-04-23T11:13:32-04:00
+description = "Home network configuration & recommendations"
+featured_image = '/images/posts/home_networking.jpg'
+tags = ["Home Network", "Wi-Fi", "DIY", "Tips", "DNS"]
+title = "Home Network"
++++
 
 # Home Networking 🌐
 

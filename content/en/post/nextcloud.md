@@ -1,10 +1,10 @@
----
-date: 2022-06-08T11:14:48-04:00
-description: "Learn how to install and use Nextcloud"
-featured_image: '/images/posts/Nextcloud_Logo.png'
-tags: ["open source", "docker", "linux", "storage", "office software"]
-title: "Your Own Cloud with Nextcloud"
----
++++
+date = 2022-06-08T11:14:48-04:00
+description = "Learn how to install and use Nextcloud"
+featured_image = '/images/posts/Nextcloud_Logo.png'
+tags = ["open source", "docker", "linux", "storage", "office software"]
+title = "Your Own Cloud with Nextcloud"
++++
 
 # Nextcloud ☁️
 

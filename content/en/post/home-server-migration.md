@@ -1,10 +1,10 @@
----
-date: 2023-07-25T11:14:48-04:00
-description: "Migrating from a server OS acting as a NAS to a NAS OS for the server"
-featured_image: '/images/posts/hddsBlue.jpg'
-tags: ["server", "docker", "linux", "ubuntu", "TrueNAS SCALE", "ZFS", "NAS", "home server", "migration"]
-title: "Home Server Migration"
----
++++
+date = 2023-07-25T11:14:48-04:00
+description = "Migrating from a server OS acting as a NAS to a NAS OS for the server"
+featured_image = '/images/posts/hddsBlue.jpg'
+tags = ["server", "docker", "linux", "ubuntu", "TrueNAS SCALE", "ZFS", "NAS", "home server", "migration"]
+title = "Home Server Migration"
++++
 
 # Home Server Migration 💾
 

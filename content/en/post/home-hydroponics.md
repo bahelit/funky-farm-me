@@ -1,10 +1,10 @@
----
-date: 2021-04-25T11:14:48-04:00
-description: "Grow home"
-featured_image: '/images/posts/gardening/frozenKale.jpg'
-tags: ["gardening", "3d Printing"]
-title: "Home Hydroponics"
----
++++
+date = 2021-04-25T11:14:48-04:00
+description = "Grow home"
+featured_image = '/images/posts/gardening/frozenKale.jpg'
+tags = ["gardening", "3d Printing"]
+title = "Home Hydroponics"
++++
 
 # Home Hydroponics 🌱 💧
 
