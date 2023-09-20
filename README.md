@@ -2,11 +2,11 @@
 
 Funky [Hugo] website using Cloudflare Pages and GitHub.
 
-- [Cloudflare & GitHub CI](#Cloudflare-&-GitHub-CI)
+- [Cloudflare & GitHub CI](#Cloudflare-and-GitHub-CI)
 - [Building locally](#building-locally)
 - [Did you fork this project?](#did-you-fork-this-project)
 
-## Cloudflare & GitHub CI
+## Cloudflare and GitHub CI
 
 This project's static Pages are built by [Cloudflare Pages](https://pages.cloudflare.com/), following the steps
 in the Cloudflare Pages [Getting Started](https://developers.cloudflare.com/pages/get-started/guide/) documentation.

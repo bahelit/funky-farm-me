@@ -112,7 +112,7 @@ filesystem.
 The Funky Farm server runs all the services using containers with [Docker](https://www.docker.com/). This allows for 
 running programs in a way that doesn't depend on what is installed on the host system or what the host operating system 
 even is. Docker makes for a great tool for home servers, allowing for easy experimentation with complicated 
-software with an easy way to clean-up afterwards.  
+software with an easy way to clean-up afterward.  
 
 ## Software
 
