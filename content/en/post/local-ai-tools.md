@@ -1,5 +1,5 @@
 +++
-date =  2023-09-20T09:14:48-04:00
+date = 2023-09-20T09:14:48-04:00
 description = "Run AI tools locally on your own hardware"
 featured_image = '/images/posts/ai_generated/lavender_field.jpg'
 tags = ["ai", "image generation", "LLM", "stable diffusion", "llama", "chatgpt"]
