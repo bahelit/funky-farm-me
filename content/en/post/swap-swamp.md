@@ -25,7 +25,7 @@ Swap:          511Mi       511Mi       100Ki
 
 512MB of swap didn't seem like allot considering the amount of RAM available, so increased it to 10GB.
 
-1st turn off the swap file.
+First turn off the swap file.
 ```bash
 sudo swapoff /swap/swapfile
 ````
