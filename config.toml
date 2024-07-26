@@ -1,6 +1,7 @@
 baseURL = 'https://blog.funkyme.farm/'
-languageCode = 'en-us'
 title = 'Funky Hugo Site'
+languageCode = 'en-us'
+resourceDir = "./resources"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
@@ -29,12 +30,11 @@ theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
   site_logo = "/images/logo.png"
   description = "Using open source tech with the community. We are building a better world."
   facebook = ""
-  twitter = "https://twitter.com/bahelit"
   instagram = ""
   youtube = ""
-  github = "https://github.com/bahelit"
+#  github = "https://github.com/bahelit"
   gitlab = ""
-  linkedin = "https://www.linkedin.com/in/michael-salmons-81748930/"
+#  linkedin = "https://www.linkedin.com/in/michael-salmons-81748930/"
   mastodon = ""
   slack = ""
   stackoverflow = ""
@@ -43,6 +43,17 @@ theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
   background_color_class = "bg-navy"
   featured_image = "/images/sundayRiver1View.jpg"
   recent_posts_number = 2
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/bahelit"
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/bahelit"
+[[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/michael-salmons-81748930/"
+
 
 # Server is currenlty offline
 #[[menu.main]]
