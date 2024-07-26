@@ -11,8 +11,8 @@ googleAnalytics = ""
 enableRobotsTXT = true
 show_reading_time = true
 
-#[module]
-#theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+[module]
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 
 [languages]
   [languages.en]
