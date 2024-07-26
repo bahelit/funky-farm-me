@@ -2,6 +2,7 @@ baseURL = 'https://blog.funkyme.farm/'
 title = 'Funky Hugo Site'
 languageCode = 'en-us'
 resourceDir = "./resources"
+theme = "ananke"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
@@ -10,8 +11,8 @@ googleAnalytics = ""
 enableRobotsTXT = true
 show_reading_time = true
 
-[module]
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+#[module]
+#theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 
 [languages]
   [languages.en]
